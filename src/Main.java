@@ -18,7 +18,7 @@ public class Main {
         ForkJoinPool forkJoinPool = new ForkJoinPool();
         FactorialTask factorialTask = new FactorialTask(n);
 
-        long result = (long) forkJoinPool.invoke(factorialTask);
+        long result = forkJoinPool.invoke(factorialTask);
 
         System.out.println("Факториал " + n + "! = " + result);
     }
